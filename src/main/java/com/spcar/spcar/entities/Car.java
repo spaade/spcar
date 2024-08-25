@@ -5,6 +5,20 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
+/**
+ * Classe Car
+ *
+ * Esta classe representa a entidade Carro no sistema de aluguel de carros.
+ *
+ * Atributos:
+ * - id: Identificador único do carro.
+ * - brand: Marca do carro.
+ * - model: Modelo do carro.
+ * - color: Cor do carro.
+ * - manufactureYear: Ano de fabricação do carro.
+ * - dailyPriceForRenting: Preço diário para alugar o carro.
+ * - rented: Indica se o carro está alugado ou não.
+ */
 @Entity
 public class Car {
 

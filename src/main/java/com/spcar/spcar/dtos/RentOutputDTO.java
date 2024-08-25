@@ -2,6 +2,13 @@ package com.spcar.spcar.dtos;
 
 import com.spcar.spcar.entities.Car;
 
+/**
+ * Classe RentOutputDTO
+ * Esta classe representa o DTO (Data Transfer Object) para a saída do aluguel de carros.
+ * Atributos:
+ * - carModel: O modelo do carro alugado.
+ * - totalPriceForRenting: O preço total do aluguel.
+ */
 public class RentOutputDTO {
 
     private Car carModel;

@@ -20,7 +20,14 @@ public class RentServiceImpl implements RentService {
         this.carRepository = carRepository;
     }
 
-
+    /**
+     * Método para alugar um carro com base no modelo, número de dias e quilômetros percorridos.
+     *
+     * @param model O modelo do carro a ser alugado.
+     * @param days O número de dias para o aluguel.
+     * @param kilometers O número de quilômetros percorridos.
+     * @return RentOutputDTO contendo o carro alugado e o preço total do aluguel.
+     */
     @Override
     public RentOutputDTO rentCar(String model, int days, double kilometers) {
         Car car = carRepository.findCarByModel(model);
@@ -31,6 +38,10 @@ public class RentServiceImpl implements RentService {
         return null;
     }
 
+    /**
+     * Método para inserir carros no repositório se não houver nenhum.
+     * Este método é executado após a construção do bean.
+     */
     @PostConstruct
     void insertCarsIfThereIsNone() {
         if (carRepository.count() == 0) {
